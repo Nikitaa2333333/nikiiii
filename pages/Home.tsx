@@ -93,7 +93,7 @@ const Home: React.FC = () => {
       <section className="relative pt-20 pb-16 md:pt-32 md:pb-24 px-4 overflow-hidden">
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h1 className="text-5xl md:text-8xl font-black text-gray-900 tracking-tighter leading-[0.85] mb-8 animate-in fade-in slide-in-from-bottom-4 duration-1000">
-            ADVANCED<br/><span className="text-blue-600">RESEARCH</span><br/>EQUIPMENT.
+            ADVANCED<br /><span className="text-blue-600">RESEARCH</span><br />EQUIPMENT.
           </h1>
           <p className="max-w-xl mx-auto text-sm md:text-xl text-gray-500 font-medium leading-relaxed mb-12 opacity-80">
             Professional solutions for laboratory excellence. Precision, reliability, and state-of-the-art technology.
@@ -155,17 +155,17 @@ const Home: React.FC = () => {
       <section className="px-4 pb-20">
         <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
           {[
-            { icon: <Zap className="w-5 h-5" />, label: "Fast Delivery", sub: "Global shipping" },
-            { icon: <ShieldCheck className="w-5 h-5" />, label: "Quality Control", sub: "ISO Certified" },
-            { icon: <Truck className="w-5 h-5" />, label: "Free Quote", sub: "Response in 15min" },
-            { icon: <Package className="w-5 h-5" />, label: "Safe Packing", sub: "Industrial standard" },
+            { icon: <Zap className="w-5 h-5" />, label: "Быстрая доставка", sub: "По всей России" },
+            { icon: <ShieldCheck className="w-5 h-5" />, label: "Контроль качества", sub: "Сертификаты ISO" },
+            { icon: <Truck className="w-5 h-5" />, label: "Бесплатный расчет", sub: "КП за 15 минут" },
+            { icon: <Package className="w-5 h-5" />, label: "Надежная упаковка", sub: "По стандартам" },
           ].map((item, i) => (
-            <div key={i} className="bg-white/50 backdrop-blur-lg border border-white/60 p-6 rounded-3xl flex flex-col items-center text-center">
+            <div key={i} className="bg-white/50 backdrop-blur-lg border border-white/60 p-4 md:p-6 rounded-2xl md:rounded-3xl flex flex-col items-center text-center shadow-sm">
               <div className="w-10 h-10 bg-blue-600 text-white rounded-xl flex items-center justify-center mb-3 shadow-lg shadow-blue-200">
                 {item.icon}
               </div>
-              <h4 className="text-xs font-black text-gray-900 uppercase tracking-tighter">{item.label}</h4>
-              <p className="text-[10px] text-gray-400 font-bold">{item.sub}</p>
+              <h4 className="text-sm font-bold text-gray-900 mb-0.5">{item.label}</h4>
+              <p className="text-xs text-gray-500">{item.sub}</p>
             </div>
           ))}
         </div>

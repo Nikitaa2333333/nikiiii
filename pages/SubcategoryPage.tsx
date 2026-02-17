@@ -125,17 +125,29 @@ const SubcategoryPage: React.FC = () => {
                       className="max-w-full max-h-full object-contain"
                       loading="lazy"
                     />
-                    {product.inStock && (
-                      <div className="absolute top-4 left-4 text-green-700 bg-green-50 px-2 py-1 rounded text-[10px] font-bold border border-green-100">
-                        В наличии
-                      </div>
-                    )}
                   </div>
 
                   <div className="p-5 flex flex-col flex-grow border-t border-gray-50">
-                    <h3 className="text-sm font-semibold text-gray-900 mb-3 line-clamp-2 group-hover:text-blue-600 transition-colors leading-snug">
+
+                    {/* Product Name */}
+                    <h3 className="text-sm font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-blue-600 transition-colors leading-snug">
                       {product.name}
                     </h3>
+
+                    {/* Stock Status - Minimal */}
+                    <div className="mb-4">
+                      {product.inStock ? (
+                        <span className="inline-flex items-center text-[10px] font-medium text-green-600 bg-green-50 px-2 py-0.5 rounded-full border border-green-100">
+                          <span className="w-1.5 h-1.5 bg-green-500 rounded-full mr-1.5 animate-pulse"></span>
+                          В наличии
+                        </span>
+                      ) : (
+                        <span className="inline-flex items-center text-[10px] font-medium text-gray-400">
+                          <span className="w-1.5 h-1.5 bg-gray-300 rounded-full mr-1.5"></span>
+                          Под заказ
+                        </span>
+                      )}
+                    </div>
 
                     {/* Key Specs Preview - Critical for B2B */}
                     <div className="mb-4 space-y-1">

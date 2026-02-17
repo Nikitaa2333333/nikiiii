@@ -32,7 +32,7 @@ const AppContent: React.FC = () => {
     <div className="relative min-h-screen font-sans text-gray-900 bg-[#f1f5f9]">
       <ScrollToTop />
 
-      {!isHomePage && <Header />}
+      <Header />
 
       <main className="relative z-10">
         <Suspense fallback={
