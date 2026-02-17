@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import { ModalProvider } from './context/ModalContext';
 import { ProductProvider } from './context/ProductContext';
 import FeedbackModal from './components/FeedbackModal';
+import PDFModal from './components/PDFModal';
 import Header from './components/Header';
 import { ROUTES } from './lib/routes';
 
@@ -51,6 +52,7 @@ const AppContent: React.FC = () => {
       </main>
 
       <FeedbackModal />
+      <PDFModal />
 
       {/* Floating Action Button */}
       {!isOpen && (

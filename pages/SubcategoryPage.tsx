@@ -3,7 +3,8 @@ import { useParams, Link, useNavigate } from 'react-router-dom';
 import { SUBCATEGORIES } from '../lib/data';
 import { useProducts } from '../context/ProductContext';
 import Breadcrumbs from '../components/Breadcrumbs';
-import { ArrowRight, LayoutGrid, Check, ChevronRight } from 'lucide-react';
+import { ArrowRight, LayoutGrid, Check, ChevronRight, FileText, MessageSquare } from 'lucide-react';
+import { useModal } from '../context/ModalContext';
 import { ROUTES } from '../lib/routes';
 import clsx from 'clsx';
 
@@ -11,6 +12,7 @@ const SubcategoryPage: React.FC = () => {
   const { categoryId, subcategoryId } = useParams<{ categoryId: string; subcategoryId: string }>();
   const navigate = useNavigate();
   const { getProductsBySubcategory, loading } = useProducts();
+  const { openModal, openPDFModal } = useModal();
   const [sortBy, setSortBy] = useState<'name' | 'stock'>('name');
   const [displayCount, setDisplayCount] = useState(24);
 
@@ -34,7 +36,7 @@ const SubcategoryPage: React.FC = () => {
     window.scrollTo(0, 0);
   }, [subcategoryId]);
 
-  if (loading) return <div className="min-h-screen flex items-center justify-center text-gray-400 font-bold tracking-widest animate-pulse">ЗАГРУЗКА...</div>;
+  if (loading) return <div className="min-h-screen flex items-center justify-center text-gray-400 font-bold tracking-widest animate-pulse">Загрузка...</div>;
   if (!currentSubcategory) return <div className="p-20 text-center">Категория не найдена</div>;
 
   return (
@@ -60,7 +62,7 @@ const SubcategoryPage: React.FC = () => {
                     key={cat.id}
                     to={ROUTES.SUBCATEGORY(categoryId!, cat.id)}
                     className={clsx(
-                      "flex-shrink-0 snap-start whitespace-nowrap px-4 py-2.5 rounded-xl text-xs font-bold transition-colors duration-200 border w-auto lg:w-full text-left flex items-center justify-between group",
+                      "flex-shrink-0 snap-start whitespace-normal px-4 py-2.5 rounded-xl text-xs font-bold transition-colors duration-200 border w-auto lg:w-full text-left flex items-center justify-between group leading-tight",
                       isActive
                         ? "bg-gray-900 text-white border-gray-900 shadow-sm"
                         : "bg-white text-gray-500 border-transparent hover:bg-blue-50 hover:text-blue-700"
@@ -92,61 +94,28 @@ const SubcategoryPage: React.FC = () => {
               <h1 className="text-2xl md:text-3xl font-extrabold text-gray-900 tracking-tight mb-2 leading-tight">
                 {currentSubcategory.name}
               </h1>
-              <p className="text-gray-500 font-semibold text-xs flex items-center gap-2">
-                <LayoutGrid className="w-3.5 h-3.5 text-blue-500" />
-                <span className="bg-blue-50 text-blue-700 px-2 py-0.5 rounded-md font-bold">{allProducts.length}</span> моделей в каталоге
-              </p>
+
             </div>
 
-            <div className="flex items-center gap-1 bg-gray-100/80 p-1 rounded-xl relative z-10">
-              <button
-                onClick={() => setSortBy('name')}
-                className={clsx("px-4 py-2 rounded-lg text-xs font-bold transition-colors", sortBy === 'name' ? "bg-white shadow-sm text-gray-900" : "text-gray-400 hover:text-gray-600")}
-              >
-                А-Я
-              </button>
-              <button
-                onClick={() => setSortBy('stock')}
-                className={clsx("px-4 py-2 rounded-lg text-xs font-bold transition-colors", sortBy === 'stock' ? "bg-white shadow-sm text-green-700" : "text-gray-400 hover:text-gray-600")}
-              >
-                Наличие
-              </button>
-            </div>
+
           </div>
 
           {/* Grid товаров */}
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-6">
             {displayedProducts.length > 0 ? (
               displayedProducts.map((product) => (
-                <Link
+                <div
                   key={product.id}
-                  to={ROUTES.PRODUCT(categoryId!, subcategoryId!, product.id)}
                   className="bg-white rounded-2xl border border-gray-100 overflow-hidden hover:border-blue-400 transition-colors duration-200 flex flex-col h-full group"
                 >
                   <div className="aspect-[1.1] bg-white relative p-6 flex items-center justify-center border-b border-gray-50">
                     <img
                       src={(product.images && product.images.length > 0 ? product.images[0] : `https://placehold.co/600x600/f1f5f9/94a3b8?text=${encodeURIComponent(product.name)}`)}
                       alt={product.name}
-                      className="max-w-full max-h-full object-contain mix-blend-multiply"
+                      className="max-width-full max-height-full object-contain mix-blend-multiply"
                       loading="lazy"
                     />
-                    {/* Stock Badge - Compact & Absolute */}
-                    <div className="absolute top-3 left-3">
-                      {product.inStock ? (
-                        <div className="flex items-center gap-1.5 bg-white/90 backdrop-blur border border-green-100 pr-2 pl-1.5 py-1 rounded-lg shadow-sm">
-                          <span className="relative flex h-2 w-2">
-                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                            <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
-                          </span>
-                          <span className="text-[10px] font-bold text-green-700 leading-none">В наличии</span>
-                        </div>
-                      ) : (
-                        <div className="flex items-center gap-1.5 bg-gray-50/90 backdrop-blur border border-gray-100 pr-2 pl-1.5 py-1 rounded-lg">
-                          <span className="h-2 w-2 rounded-full bg-gray-300"></span>
-                          <span className="text-[10px] font-bold text-gray-400 leading-none">Под заказ</span>
-                        </div>
-                      )}
-                    </div>
+
                   </div>
 
                   <div className="p-5 flex flex-col flex-grow">
@@ -154,18 +123,41 @@ const SubcategoryPage: React.FC = () => {
                       {product.name}
                     </h3>
 
-                    <div className="mt-auto pt-3 flex items-center justify-between">
-                      <div className="flex flex-wrap gap-1">
-                        {product.specs.slice(0, 1).map((s, i) => (
-                          <span key={i} className="text-[10px] text-gray-400 bg-gray-50 px-1.5 py-0.5 rounded border border-gray-100 line-clamp-1 max-w-[120px]">{s.split(':')[0]}</span>
-                        ))}
-                      </div>
-                      <div className="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                        <ArrowRight className="w-4 h-4 text-gray-300 group-hover:text-white transition-colors" />
-                      </div>
+                    <div className="flex flex-col gap-2 mb-6">
+                      {product.description.split(',').map((part, idx) => (
+                        <div key={idx} className="flex items-start gap-2 text-xs text-gray-700 leading-tight">
+                          <span className="w-1.5 h-1.5 bg-blue-500 rounded-full flex-shrink-0 mt-1.5" />
+                          <span>{part.trim()}</span>
+                        </div>
+                      ))}
+                    </div>
+
+                    <div className="mt-auto pt-3 flex items-center gap-2 justify-start">
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          openPDFModal('/brochure.pdf');
+                        }}
+                        className="bg-gray-900 text-white px-4 py-2.5 rounded-xl text-[11px] font-semibold hover:bg-black transition-all duration-200 flex items-center gap-2 shadow-sm hover:shadow-md active:scale-95 whitespace-nowrap"
+                      >
+                        <FileText className="w-3.5 h-3.5" />
+                        <span>Открыть PDF</span>
+                      </button>
+
+                      <button
+                        onClick={(e) => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                          openModal(product.name);
+                        }}
+                        className="bg-white text-gray-700 border border-gray-200 px-4 py-2.5 rounded-xl text-[11px] font-semibold hover:bg-gray-50 hover:border-gray-300 transition-all duration-200 flex items-center gap-2 shadow-sm active:scale-95 whitespace-nowrap"
+                      >
+                        <MessageSquare className="w-3.5 h-3.5 text-blue-500" />
+                        <span>Запросить предложение</span>
+                      </button>
                     </div>
                   </div>
-                </Link>
+                </div>
               ))
             ) : (
               <div className="col-span-full py-20 text-center bg-white rounded-3xl border border-dashed border-gray-200">

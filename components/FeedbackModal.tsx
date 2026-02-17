@@ -4,7 +4,7 @@ import { useModal } from '../context/ModalContext';
 import { submitLead } from '../lib/formService';
 
 const FeedbackModal: React.FC = () => {
-  const { isOpen, closeModal, productName } = useModal();
+  const { activeModal, closeModal, productName } = useModal();
   const [formState, setFormState] = useState<'idle' | 'submitting' | 'success'>('idle');
   const [formData, setFormData] = useState({ name: '', phone: '' });
   const [errors, setErrors] = useState({ name: '', phone: '' });
@@ -53,7 +53,7 @@ const FeedbackModal: React.FC = () => {
     }, 3000);
   };
 
-  if (!isOpen) return null;
+  if (activeModal !== 'feedback') return null;
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
