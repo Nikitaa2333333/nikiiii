@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { MANUFACTURERS } from '../lib/data';
 import { ROUTES } from '../lib/routes';
+import { CatalogToggle } from '../components/CatalogToggle';
 
 const ManufacturersPage: React.FC = () => {
     return (
@@ -9,6 +10,7 @@ const ManufacturersPage: React.FC = () => {
 
             {/* Manufacturers Grid */}
             <section className="px-4 md:px-8 lg:px-12 py-8">
+                <CatalogToggle />
                 <div className="max-w-[1920px] mx-auto">
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                         {MANUFACTURERS.map((brand) => (

@@ -20,6 +20,7 @@ import {
 import { CATEGORIES, SUBCATEGORIES } from '../lib/data';
 import { useProducts } from '../context/ProductContext';
 import { ROUTES } from '../lib/routes';
+import { CatalogToggle } from '../components/CatalogToggle';
 
 const CatalogPage: React.FC = () => {
     const { products: PRODUCTS } = useProducts();
@@ -85,19 +86,15 @@ const CatalogPage: React.FC = () => {
         return [];
     }, [searchQuery, fuse]);
 
+
+
     return (
         <div className="flex flex-col min-h-screen bg-white pb-24">
-            {/* Header is global, but we need to inject the toggle there or hide the global header and render a custom one.
-               For now, let's assume the user wants the Visual effect of a single header.
-               
-               If I can't easily modify the global header from here without context/prop drilling, 
-               I might need to modify Header.tsx directly.
-               
-               I will RETURN from this tool and modify Header.tsx instead.
-            */}
 
             {/* Categories Grid */}
             <section className="px-4 md:px-8 lg:px-12 py-8">
+                <CatalogToggle />
+
                 <div className="max-w-[1920px] mx-auto">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                         {CATEGORIES.map((category) => {
