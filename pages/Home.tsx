@@ -16,15 +16,20 @@ const Home: React.FC = () => {
       <section className="relative pt-24 pb-20 md:pt-40 md:pb-32 px-4 z-40 overflow-hidden">
         {/* Background Blobs Container (Clipped) */}
         <div className="absolute inset-0 overflow-hidden -z-10">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full pointer-events-none opacity-30">
-            <div className="absolute top-20 left-10 w-96 h-96 bg-blue-400/30 blur-[120px] rounded-full" />
-            <div className="absolute bottom-20 right-10 w-96 h-96 bg-indigo-400/30 blur-[120px] rounded-full" />
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full pointer-events-none opacity-40">
+            <div className="absolute top-20 left-10 w-96 h-96 bg-green-400/20 blur-[120px] rounded-full animate-pulse" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-purple-400/20 blur-[120px] rounded-full" />
+            <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyan-400/20 blur-[120px] rounded-full animate-pulse" />
           </div>
         </div>
 
         <div className="max-w-5xl mx-auto text-center relative z-20">
-          <h1 className="text-4xl sm:text-6xl md:text-8xl font-extrabold text-gray-900 leading-[1.1] mb-8">
-            Современное <br className="hidden sm:block" /><span className="text-blue-600">лабораторное</span> оборудование
+          <h1 className="text-4xl sm:text-6xl md:text-8xl font-extrabold text-gray-900 leading-[1.1] mb-8 tracking-tight">
+            Современное <br className="hidden sm:block" />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#22c55e] via-[#a855f7] to-[#06b6d4]">
+              лабораторное
+            </span>
+            <br className="hidden sm:block" /> оборудование
           </h1>
           <p className="max-w-2xl mx-auto text-lg md:text-2xl text-gray-500 font-medium leading-relaxed mb-12 opacity-80">
             Профессиональные решения для лабораторий. Точность, надежность и передовые технологии.
