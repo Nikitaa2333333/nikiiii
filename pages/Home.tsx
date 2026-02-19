@@ -26,7 +26,7 @@ const Home: React.FC = () => {
         <div className="max-w-5xl mx-auto text-center relative z-20">
           <h1 className="text-4xl sm:text-6xl md:text-8xl font-extrabold text-gray-900 leading-[1.1] mb-8 tracking-tight">
             Современное <br className="hidden sm:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#22c55e] via-[#a855f7] to-[#06b6d4]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#818cf8] via-[#6366f1] to-[#60a5fa] animate-gradient">
               лабораторное
             </span>
             <br className="hidden sm:block" /> оборудование
