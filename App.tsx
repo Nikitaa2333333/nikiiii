@@ -76,7 +76,7 @@ const AppContent: React.FC = () => {
 
 const App: React.FC = () => {
   return (
-    <Router basename="/nikiiii">
+    <Router basename="/">
       <ModalProvider>
         <ProductProvider>
           <AppContent />

@@ -17,7 +17,7 @@ const Header: React.FC = () => {
                 {/* Logo */}
                 <Link to={ROUTES.HOME} className="flex items-center shrink-0 group">
                     <img
-                        src="/nikiiii/logo.svg"
+                        src="/logo.svg"
                         alt="Grafit"
                         className="h-9 w-auto object-contain"
                     />
