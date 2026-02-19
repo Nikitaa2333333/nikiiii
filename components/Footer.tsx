@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
                     {/* Brand Column */}
                     <div className="col-span-1 md:col-span-2 space-y-4">
                         <Link to={ROUTES.HOME} className="text-xl font-black text-gray-900 tracking-tight">
-                            WAYY
+                            Grafit
                         </Link>
                         <p className="text-gray-500 text-sm leading-relaxed max-w-xs">
                             Профессиональное лабораторное оборудование от ведущих мировых производителей.
@@ -53,7 +53,7 @@ const Footer: React.FC = () => {
                             <li>
                                 <a href="mailto:info@graphic-lab.ru" className="flex items-center gap-2 hover:text-blue-600 transition-colors group">
                                     <Mail className="w-4 h-4 text-gray-400 group-hover:text-blue-600 transition-colors" />
-                                    <span>info@wayy.ru</span>
+                                    <span>info@graphic-lab.ru</span>
                                 </a>
                             </li>
                             <li>
@@ -68,7 +68,7 @@ const Footer: React.FC = () => {
 
                 {/* Bottom Bar */}
                 <div className="mt-12 pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-400 font-medium">
-                    <p>&copy; {currentYear} WAYY. Все права защищены.</p>
+                    <p>&copy; {currentYear} Grafit. Все права защищены.</p>
                     <div className="flex gap-6">
                         <a href="#" className="hover:text-gray-900 transition-colors">Политика конфиденциальности</a>
                         <a href="#" className="hover:text-gray-900 transition-colors">Условия использования</a>

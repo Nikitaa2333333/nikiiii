@@ -9,7 +9,7 @@ const ManufacturersPage: React.FC = () => {
         <div className="flex flex-col min-h-screen bg-white pb-24">
 
             {/* Manufacturers Grid */}
-            <section className="px-4 md:px-8 lg:px-12 py-8">
+            <section className="px-4 md:px-8 lg:px-12 pt-4 pb-8">
                 <CatalogToggle />
                 <div className="max-w-[1920px] mx-auto">
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
