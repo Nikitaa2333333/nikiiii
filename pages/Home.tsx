@@ -26,7 +26,7 @@ const Home: React.FC = () => {
         <div className="max-w-5xl mx-auto text-center relative z-20">
           <h1 className="text-4xl sm:text-6xl md:text-8xl font-extrabold text-gray-900 leading-[1.1] mb-8 tracking-tight">
             Современное <br className="hidden sm:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#818cf8] via-[#6366f1] to-[#60a5fa] animate-gradient">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#22c55e] via-[#a855f7] to-[#06b6d4]">
               лабораторное
             </span>
             <br className="hidden sm:block" /> оборудование
@@ -37,7 +37,7 @@ const Home: React.FC = () => {
 
           <Link
             to={ROUTES.CATALOG}
-            className="inline-flex items-center gap-4 bg-gray-900 text-white px-10 py-6 rounded-full text-xl font-bold shadow-lg hover:bg-blue-600 transition-colors group"
+            className="inline-flex items-center gap-4 bg-gray-900 text-white px-10 py-6 rounded-full text-xl font-bold shadow-lg hover:bg-indigo-600 transition-colors group"
           >
             <span>Перейти в каталог</span>
             <div className="bg-white/10 p-2 rounded-full group-hover:bg-white/20 transition-colors">

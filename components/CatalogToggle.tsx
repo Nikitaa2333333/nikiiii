@@ -13,8 +13,8 @@ export const CatalogToggle: React.FC = () => {
                 <Link
                     to={ROUTES.CATALOG}
                     className={`px-6 py-2 rounded-lg text-sm font-bold transition-all ${isCatalog
-                        ? 'bg-blue-600 text-white shadow-md'
-                        : 'bg-transparent text-gray-500 hover:text-blue-600'
+                        ? 'bg-indigo-600 text-white shadow-md'
+                        : 'bg-transparent text-gray-500 hover:text-indigo-600'
                         }`}
                 >
                     По категориям
@@ -22,8 +22,8 @@ export const CatalogToggle: React.FC = () => {
                 <Link
                     to={ROUTES.MANUFACTURERS}
                     className={`px-6 py-2 rounded-lg text-sm font-bold transition-all ${isManufacturers
-                        ? 'bg-blue-600 text-white shadow-md'
-                        : 'bg-transparent text-gray-500 hover:text-blue-600'
+                        ? 'bg-indigo-600 text-white shadow-md'
+                        : 'bg-transparent text-gray-500 hover:text-indigo-600'
                         }`}
                 >
                     По производителям

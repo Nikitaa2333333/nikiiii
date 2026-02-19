@@ -26,16 +26,16 @@ const Footer: React.FC = () => {
                         <h4 className="text-sm font-bold text-gray-900">Навигация</h4>
                         <ul className="space-y-2 text-sm text-gray-500 font-medium">
                             <li>
-                                <Link to={ROUTES.CATALOG} className="hover:text-blue-600 transition-colors">Каталог</Link>
+                                <Link to={ROUTES.CATALOG} className="hover:text-indigo-600 transition-colors">Каталог</Link>
                             </li>
                             <li>
-                                <Link to={ROUTES.MANUFACTURERS} className="hover:text-blue-600 transition-colors">Производители</Link>
+                                <Link to={ROUTES.MANUFACTURERS} className="hover:text-indigo-600 transition-colors">Производители</Link>
                             </li>
                             <li>
-                                <button className="hover:text-blue-600 transition-colors">О компании</button>
+                                <button className="hover:text-indigo-600 transition-colors">О компании</button>
                             </li>
                             <li>
-                                <button className="hover:text-blue-600 transition-colors">Доставка</button>
+                                <button className="hover:text-indigo-600 transition-colors">Доставка</button>
                             </li>
                         </ul>
                     </div>
@@ -45,14 +45,14 @@ const Footer: React.FC = () => {
                         <h4 className="text-sm font-bold text-gray-900">Контакты</h4>
                         <ul className="space-y-3 text-sm text-gray-500 font-medium">
                             <li>
-                                <a href="tel:+79990000000" className="flex items-center gap-2 hover:text-blue-600 transition-colors group">
-                                    <Phone className="w-4 h-4 text-gray-400 group-hover:text-blue-600 transition-colors" />
+                                <a href="tel:+79990000000" className="flex items-center gap-2 hover:text-indigo-600 transition-colors group">
+                                    <Phone className="w-4 h-4 text-gray-400 group-hover:text-indigo-600 transition-colors" />
                                     <span>+7 (999) 000-00-00</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="mailto:info@graphic-lab.ru" className="flex items-center gap-2 hover:text-blue-600 transition-colors group">
-                                    <Mail className="w-4 h-4 text-gray-400 group-hover:text-blue-600 transition-colors" />
+                                <a href="mailto:info@graphic-lab.ru" className="flex items-center gap-2 hover:text-indigo-600 transition-colors group">
+                                    <Mail className="w-4 h-4 text-gray-400 group-hover:text-indigo-600 transition-colors" />
                                     <span>info@graphic-lab.ru</span>
                                 </a>
                             </li>
