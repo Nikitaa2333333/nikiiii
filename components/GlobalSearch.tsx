@@ -77,7 +77,7 @@ export const GlobalSearch: React.FC = () => {
         <div className="relative w-full">
             {/* Search Input Area */}
             <div className="relative flex items-center group">
-                <Search className="absolute left-4 w-4 h-4 text-gray-400 group-focus-within:text-indigo-600 transition-colors" />
+                <Search className="absolute left-4 w-4 h-4 text-gray-400 group-focus-within:text-cyan-600 transition-colors" />
                 <input
                     type="text"
                     value={query}
@@ -87,7 +87,7 @@ export const GlobalSearch: React.FC = () => {
                     }}
                     onFocus={() => setIsOpen(true)}
                     placeholder="Поиск оборудования..."
-                    className="w-full pl-11 pr-14 py-2 bg-white rounded-xl border border-gray-200 focus:border-indigo-600 transition-colors text-sm font-medium text-gray-900 placeholder-gray-400 outline-none"
+                    className="w-full pl-11 pr-14 py-2 bg-white rounded-xl border border-gray-200 focus:border-cyan-600 transition-colors text-sm font-medium text-gray-900 placeholder-gray-400 outline-none"
                 />
 
                 {query && (
@@ -99,7 +99,7 @@ export const GlobalSearch: React.FC = () => {
                     </button>
                 )}
 
-                <div className="absolute right-3 p-1.5 bg-gray-50 text-gray-400 rounded-lg group-focus-within:bg-indigo-600 group-focus-within:text-white transition-colors">
+                <div className="absolute right-3 p-1.5 bg-gray-50 text-gray-400 rounded-lg group-focus-within:bg-cyan-600 group-focus-within:text-white transition-colors">
                     <Search className="w-4 h-4" />
                 </div>
             </div>
@@ -130,11 +130,11 @@ export const GlobalSearch: React.FC = () => {
                                                 onClick={() => setIsOpen(false)}
                                                 className="flex items-center gap-4 p-3 hover:bg-gray-50 transition-colors group"
                                             >
-                                                <div className="w-12 h-12 bg-gray-50 rounded-xl flex-shrink-0 flex items-center justify-center p-1 border border-gray-100 group-hover:border-indigo-100">
+                                                <div className="w-12 h-12 bg-gray-50 rounded-xl flex-shrink-0 flex items-center justify-center p-1 border border-gray-100 group-hover:border-cyan-100">
                                                     <img src={product.images?.[0]} alt="" className="w-full h-full object-contain mix-blend-multiply" />
                                                 </div>
                                                 <div className="flex-1 min-w-0">
-                                                    <h4 className="text-sm font-bold text-gray-900 group-hover:text-indigo-600 transition-colors truncate">
+                                                    <h4 className="text-sm font-bold text-gray-900 group-hover:text-cyan-600 transition-colors truncate">
                                                         {product.name}
                                                     </h4>
                                                     <p className="text-[10px] text-gray-400 mt-0.5">

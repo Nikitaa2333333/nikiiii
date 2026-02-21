@@ -20,31 +20,17 @@ export const CATEGORIES: Category[] = [
 ];
 
 export const SUBCATEGORIES: Subcategory[] = [
-    {
-        id: 'blood-bank-centrifuge',
-        categoryId: 'centrifuge',
-        name: 'Центрифуги для службы крови'
-    },
-    {
-        id: 'high-speed-centrifuge',
-        categoryId: 'centrifuge',
-        name: 'Высокоскоростные центрифуги'
-    },
-    {
-        id: 'high-speed-refrigerated-centrifuge',
-        categoryId: 'centrifuge',
-        name: 'Высокоскоростные с охлаждением'
-    },
-    {
-        id: 'large-capacity-refrigerated-centrifuge',
-        categoryId: 'centrifuge',
-        name: 'Большой емкости с охлаждением'
-    },
-    {
-        id: 'low-speed-centrifuge',
-        categoryId: 'centrifuge',
-        name: 'Низкоскоростные центрифуги'
-    }
+    { id: 'low-speed', categoryId: 'centrifuge', name: 'Центрифуги низкоскоростные' },
+    { id: 'high-speed', categoryId: 'centrifuge', name: 'Центрифуги высокоскоростные' },
+    { id: 'micro-mini', categoryId: 'centrifuge', name: 'Микро-центрифуги и мини-центрифуги' },
+    { id: 'floor-large-capacity', categoryId: 'centrifuge', name: 'Напольные центрифуги большого объема' },
+    { id: 'cytology', categoryId: 'centrifuge', name: 'Цитологические центрифуги' },
+    { id: 'petroleum', categoryId: 'centrifuge', name: 'Центрифуги для анализа нефтепродуктов' },
+    { id: 'gel-cards', categoryId: 'centrifuge', name: 'Центрифуги для гелевых карт' },
+    { id: 'cosmetology-prp', categoryId: 'centrifuge', name: 'Центрифуги для косметологии (PRP -плазмалифтинг)' },
+    { id: 'hematocrit', categoryId: 'centrifuge', name: 'Гематокритные центрифуги' },
+    { id: 'cell-washing', categoryId: 'centrifuge', name: 'Центрифуги для промывки клеток' },
+    { id: 'ultracentrifuge', categoryId: 'centrifuge', name: 'Ультрацентрифуги' }
 ];
 
 export const MANUFACTURERS = [
