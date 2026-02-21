@@ -8,22 +8,22 @@ export const CatalogToggle: React.FC = () => {
     const isManufacturers = location.pathname === ROUTES.MANUFACTURERS;
 
     return (
-        <div className="flex justify-center w-full pt-2 pb-4">
-            <div className="inline-flex items-center bg-gray-100 p-1 rounded-xl shadow-sm">
+        <div className="flex justify-center w-full pt-2 pb-6">
+            <div className="inline-flex items-center bg-white border border-slate-200/60 p-1.5 rounded-full shadow-soft-sm">
                 <Link
                     to={ROUTES.CATALOG}
-                    className={`px-6 py-2 rounded-lg text-sm font-bold transition-all ${isCatalog
-                        ? 'bg-indigo-600 text-white shadow-md'
-                        : 'bg-transparent text-gray-500 hover:text-indigo-600'
+                    className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${isCatalog
+                        ? 'bg-cyan-600 text-white shadow-md shadow-cyan-600/20'
+                        : 'bg-transparent text-slate-500 hover:text-cyan-600 hover:bg-slate-50'
                         }`}
                 >
                     По категориям
                 </Link>
                 <Link
                     to={ROUTES.MANUFACTURERS}
-                    className={`px-6 py-2 rounded-lg text-sm font-bold transition-all ${isManufacturers
-                        ? 'bg-indigo-600 text-white shadow-md'
-                        : 'bg-transparent text-gray-500 hover:text-indigo-600'
+                    className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${isManufacturers
+                        ? 'bg-cyan-600 text-white shadow-md shadow-cyan-600/20'
+                        : 'bg-transparent text-slate-500 hover:text-cyan-600 hover:bg-slate-50'
                         }`}
                 >
                     По производителям

@@ -15,7 +15,11 @@ import {
     Wind,
     Sparkles,
     Armchair,
-    ChevronRight
+    ChevronRight,
+    TestTubes,
+    Dna,
+    Building2,
+    PackageCheck
 } from 'lucide-react';
 import { CATEGORIES, SUBCATEGORIES } from '../lib/data';
 import { useProducts } from '../context/ProductContext';
@@ -39,6 +43,10 @@ const CatalogPage: React.FC = () => {
         'laminar': { gradient: 'from-teal-50 to-green-50', hoverGradient: 'hover:from-teal-50 hover:to-green-50', iconColor: 'text-teal-500' },
         'cleaning': { gradient: 'from-yellow-50 to-amber-50', hoverGradient: 'hover:from-yellow-50 hover:to-amber-50', iconColor: 'text-yellow-500' },
         'furniture': { gradient: 'from-stone-50 to-gray-50', hoverGradient: 'hover:from-stone-50 hover:to-gray-50', iconColor: 'text-stone-500' },
+        'chemicals': { gradient: 'from-lime-50 to-green-50', hoverGradient: 'hover:from-lime-50 hover:to-green-50', iconColor: 'text-lime-500' },
+        'microbiology': { gradient: 'from-violet-50 to-fuchsia-50', hoverGradient: 'hover:from-violet-50 hover:to-fuchsia-50', iconColor: 'text-violet-500' },
+        'domestic': { gradient: 'from-slate-50 to-gray-50', hoverGradient: 'hover:from-slate-50 hover:to-gray-50', iconColor: 'text-slate-500' },
+        'in-stock': { gradient: 'from-green-50 to-emerald-50', hoverGradient: 'hover:from-green-50 hover:to-emerald-50', iconColor: 'text-emerald-500' },
     };
 
     const getIcon = (id: string, className: string) => {
@@ -55,6 +63,10 @@ const CatalogPage: React.FC = () => {
             case 'laminar': return <Wind className={className} />;
             case 'cleaning': return <Sparkles className={className} />;
             case 'furniture': return <Armchair className={className} />;
+            case 'chemicals': return <TestTubes className={className} />;
+            case 'microbiology': return <Dna className={className} />;
+            case 'domestic': return <Building2 className={className} />;
+            case 'in-stock': return <PackageCheck className={className} />;
             default: return <FlaskConical className={className} />;
         }
     }
@@ -89,7 +101,7 @@ const CatalogPage: React.FC = () => {
 
 
     return (
-        <div className="flex flex-col min-h-screen bg-white pb-24">
+        <div className="flex flex-col min-h-screen pb-24">
 
             {/* Categories Grid */}
             <section className="px-4 md:px-8 lg:px-12 pt-4 pb-8">
@@ -104,10 +116,10 @@ const CatalogPage: React.FC = () => {
                                 <Link
                                     key={category.id}
                                     to={ROUTES.CATEGORY(category.id)}
-                                    className={`group relative bg-white rounded-2xl p-6 border border-gray-200 hover:border-transparent hover:shadow-lg transition-all h-32 overflow-hidden flex flex-col justify-start bg-gradient-to-br ${style.hoverGradient}`}
+                                    className={`surface-card group relative rounded-[20px] p-6 h-36 overflow-hidden flex flex-col justify-start bg-gradient-to-br transition-all ${style.hoverGradient}`}
                                 >
                                     {/* Text - Top Left */}
-                                    <h3 className="relative z-10 text-lg font-bold text-gray-900 leading-tight group-hover:text-blue-600 transition-colors max-w-[70%]">
+                                    <h3 className="relative z-10 text-lg font-bold text-gray-900 leading-tight group-hover:text-cyan-600 transition-colors max-w-[70%]">
                                         {category.name}
                                     </h3>
 

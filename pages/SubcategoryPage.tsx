@@ -86,15 +86,15 @@ const SubcategoryPage: React.FC = () => {
                       ))}
                     </div>
 
-                    <div className="mt-auto pt-3 flex items-center gap-2 justify-start">
+                    <div className="mt-auto pt-3 flex flex-col gap-2">
                       <button
                         onClick={(e) => {
                           e.stopPropagation();
                           openPDFModal('/brochure.pdf');
                         }}
-                        className="bg-gray-900 text-white px-4 py-2.5 rounded-xl text-[11px] font-semibold hover:bg-black transition-all duration-200 flex items-center gap-2 shadow-sm hover:shadow-md active:scale-95 whitespace-nowrap"
+                        className="w-full bg-gray-900 text-white px-4 py-2.5 rounded-xl text-xs font-semibold hover:bg-black transition-all duration-200 flex items-center justify-center gap-2 shadow-sm hover:shadow-md active:scale-95"
                       >
-                        <FileText className="w-3.5 h-3.5" />
+                        <FileText className="w-4 h-4" />
                         <span>Открыть PDF</span>
                       </button>
 
@@ -104,9 +104,9 @@ const SubcategoryPage: React.FC = () => {
                           e.stopPropagation();
                           openModal(product.name);
                         }}
-                        className="bg-white text-gray-700 border border-gray-200 px-4 py-2.5 rounded-xl text-[11px] font-semibold hover:bg-gray-50 hover:border-gray-300 transition-all duration-200 flex items-center gap-2 shadow-sm active:scale-95 whitespace-nowrap"
+                        className="w-full bg-white text-gray-700 border border-gray-200 px-4 py-2.5 rounded-xl text-xs font-semibold hover:bg-gray-50 hover:border-gray-300 transition-all duration-200 flex items-center justify-center gap-2 shadow-sm active:scale-95"
                       >
-                        <MessageSquare className="w-3.5 h-3.5 text-blue-500" />
+                        <MessageSquare className="w-4 h-4 text-cyan-500" />
                         <span>Запросить предложение</span>
                       </button>
                     </div>

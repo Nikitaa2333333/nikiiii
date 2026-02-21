@@ -32,16 +32,16 @@ const Header: React.FC = () => {
 
                 {/* Contacts (Right) */}
                 <div className="hidden lg:flex items-center gap-6 text-[13px] font-medium text-gray-500 shrink-0">
-                    <a href="tel:+79990000000" className="flex items-center gap-2 hover:text-indigo-600 transition-colors">
-                        <Phone className="w-4 h-4 text-indigo-500" />
+                    <a href="tel:+79990000000" className="flex items-center gap-2 hover:text-cyan-600 transition-colors">
+                        <Phone className="w-4 h-4 text-cyan-500" />
                         <span>+7 (999) 000-00-00</span>
                     </a>
-                    <a href="mailto:info@graphic-lab.ru" className="flex items-center gap-2 hover:text-indigo-600 transition-colors">
-                        <Mail className="w-4 h-4 text-indigo-500" />
+                    <a href="mailto:info@graphic-lab.ru" className="flex items-center gap-2 hover:text-cyan-600 transition-colors">
+                        <Mail className="w-4 h-4 text-cyan-500" />
                         <span>info@graphic-lab.ru</span>
                     </a>
                     <div className="flex items-center gap-2 cursor-default">
-                        <Clock className="w-4 h-4 text-indigo-500" />
+                        <Clock className="w-4 h-4 text-cyan-500" />
                         <span>Пн-Пт 9:00-18:00</span>
                     </div>
                 </div>

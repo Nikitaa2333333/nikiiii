@@ -29,13 +29,13 @@ const CategoryPage: React.FC = () => {
           <Link
             key={sub.id}
             to={ROUTES.SUBCATEGORY(categoryId!, sub.id)}
-            className="group relative bg-white rounded-2xl p-6 border border-gray-200 hover:border-blue-500 hover:shadow-lg transition-all h-32 flex flex-col justify-start overflow-hidden"
+            className="surface-card group relative rounded-[20px] p-6 h-32 flex flex-col justify-start overflow-hidden hover:border-cyan-500/50"
           >
-            <span className="text-lg font-bold text-gray-900 leading-tight group-hover:text-blue-600 transition-colors pr-8 z-10">
+            <span className="text-lg font-bold text-gray-900 leading-tight group-hover:text-cyan-600 transition-colors pr-8 z-10">
               {sub.name}
             </span>
 
-            <div className="absolute right-4 bottom-4 opacity-0 group-hover:opacity-100 transition-all transform translate-y-2 group-hover:translate-y-0 text-blue-600">
+            <div className="absolute right-4 bottom-4 opacity-0 group-hover:opacity-100 transition-all transform translate-y-2 group-hover:translate-y-0 text-cyan-600">
               <ChevronRight className="w-5 h-5" />
             </div>
           </Link>
@@ -43,8 +43,8 @@ const CategoryPage: React.FC = () => {
       </div>
 
       {relevantSubcategories.length === 0 && (
-        <div className="py-20 text-center bg-white rounded-3xl border border-dashed border-gray-200">
-          <p className="text-gray-400 font-bold">В этом разделе пока нет подразделов</p>
+        <div className="py-20 text-center rounded-[24px] border border-dashed border-slate-300">
+          <p className="text-slate-400 font-bold">В этом разделе пока нет подразделов</p>
         </div>
       )}
     </div>

@@ -15,6 +15,7 @@ const ManufacturersPage = lazy(() => import('./pages/ManufacturersPage'));
 const CategoryPage = lazy(() => import('./pages/CategoryPage'));
 const SubcategoryPage = lazy(() => import('./pages/SubcategoryPage'));
 const ProductPage = lazy(() => import('./pages/ProductPage'));
+const ArticlesPage = lazy(() => import('./pages/ArticlesPage'));
 import { useModal } from './context/ModalContext';
 
 const ScrollToTop = () => {
@@ -33,7 +34,7 @@ const AppContent: React.FC = () => {
   const { openModal, isOpen } = useModal();
 
   return (
-    <div className="relative min-h-screen font-sans text-gray-900 bg-[#f1f5f9]">
+    <div className="relative min-h-screen font-sans text-gray-900">
       <ScrollToTop />
 
       <Header />
@@ -51,6 +52,7 @@ const AppContent: React.FC = () => {
             <Route path="/catalog/:categoryId" element={<CategoryPage />} />
             <Route path="/catalog/:categoryId/:subcategoryId" element={<SubcategoryPage />} />
             <Route path="/catalog/:categoryId/:subcategoryId/:productId" element={<ProductPage />} />
+            <Route path="/articles" element={<ArticlesPage />} />
             <Route path="*" element={<Home />} />
           </Routes>
         </Suspense>
@@ -63,7 +65,7 @@ const AppContent: React.FC = () => {
       {!isOpen && (
         <button
           onClick={() => openModal()}
-          className="fixed bottom-6 left-1/2 -translate-x-1/2 md:left-auto md:right-8 md:translate-x-0 bg-gray-900 text-white px-8 py-4 rounded-full shadow-2xl z-50 flex items-center justify-center font-semibold hover:bg-gray-800 active:scale-95 transition-all w-[calc(100%-32px)] md:w-auto"
+          className="fixed bottom-6 left-1/2 -translate-x-1/2 md:left-auto md:right-8 md:translate-x-0 bg-cyan-600 text-white px-8 py-4 rounded-full shadow-2xl z-50 flex items-center justify-center font-semibold hover:bg-cyan-700 active:scale-95 transition-all w-[calc(100%-32px)] md:w-auto"
         >
           Связаться с менеджером
         </button>

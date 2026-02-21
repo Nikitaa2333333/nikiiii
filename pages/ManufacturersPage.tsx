@@ -6,7 +6,7 @@ import { CatalogToggle } from '../components/CatalogToggle';
 
 const ManufacturersPage: React.FC = () => {
     return (
-        <div className="flex flex-col min-h-screen bg-white pb-24">
+        <div className="flex flex-col min-h-screen pb-24">
 
             {/* Manufacturers Grid */}
             <section className="px-4 md:px-8 lg:px-12 pt-4 pb-8">
@@ -16,7 +16,7 @@ const ManufacturersPage: React.FC = () => {
                         {MANUFACTURERS.map((brand) => (
                             <div
                                 key={brand.id}
-                                className="group bg-white hover:bg-blue-50/50 rounded-2xl h-32 border border-gray-200 hover:border-blue-500 hover:shadow-lg transition-all flex items-center justify-center p-8 relative overflow-hidden"
+                                className="surface-card group h-32 rounded-[20px] flex items-center justify-center p-8 relative overflow-hidden flex-shrink-0"
                             >
                                 <img
                                     src={brand.logo}

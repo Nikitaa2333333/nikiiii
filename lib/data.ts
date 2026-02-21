@@ -12,7 +12,11 @@ export const CATEGORIES: Category[] = [
     { id: 'microscopes', name: 'Микроскопия', span: '1x1' },
     { id: 'laminar', name: 'Ламинарные шкафы и боксы', span: '1x1' },
     { id: 'cleaning', name: 'Очистка и стерилизация', span: '1x1' },
-    { id: 'furniture', name: 'Лабораторная мебель', span: '1x1' }
+    { id: 'furniture', name: 'Лабораторная мебель', span: '1x1' },
+    { id: 'chemicals', name: 'Химические реактивы и стандартные образцы', span: '1x1' },
+    { id: 'microbiology', name: 'Микробиология', span: '1x1' },
+    { id: 'domestic', name: 'Отечественные производители', span: '1x1' },
+    { id: 'in-stock', name: 'В наличии на складе', span: '1x1' }
 ];
 
 export const SUBCATEGORIES: Subcategory[] = [
