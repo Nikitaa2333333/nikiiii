@@ -42,7 +42,7 @@ export const MANUFACTURERS: Manufacturer[] = [
     {
         id: 'memmert',
         name: 'Memmert GmbH + Co.KG',
-        logo: 'https://cdn.brandfetch.io/memmert.com/w/400/h/400',
+        logo: '/manufacturers/memmert.png',
         brandColor: '#D30F24',
         description: 'С момента основания в 1933 году Memmert всегда был и остается надежным партнером для своих клиентов, что является одной из основополагающих причин успеха бренда. Сейчас компания Memmert занимет почетное место среди ведущих производителей термостатирующего оборудования для различных применений.',
         highlights: [
