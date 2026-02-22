@@ -24,19 +24,9 @@ const Home: React.FC = () => {
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
       <section className="relative pt-24 pb-20 md:pt-40 md:pb-32 px-4 z-40 overflow-hidden">
-        {/* Hero Background - Animated Chemical Molecules */}
+        {/* Simple gradient background */}
         <div className="absolute inset-0 overflow-hidden -z-10 bg-slate-50 flex items-center justify-center">
-          {/* A larger container for the background to ensure it spans the whole screen width and a bit more for spinning, fading out at the edges */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200vw] h-[200vw] md:w-[150vw] md:h-[150vw] opacity-[0.20]"
-            style={{
-              backgroundImage: `url("data:image/svg+xml,%3Csvg width='160' height='160' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M60 20L94.641 40L94.641 80L60 100L25.359 80L25.359 40L60 20Z' fill='none' stroke='%230891B2' stroke-width='2'/%3E%3Ccircle cx='60' cy='20' r='5' fill='%230891B2'/%3E%3Ccircle cx='94.641' cy='40' r='5' fill='%230891B2'/%3E%3Ccircle cx='94.641' cy='80' r='5' fill='%230891B2'/%3E%3Ccircle cx='60' cy='100' r='5' fill='%230891B2'/%3E%3Ccircle cx='25.359' cy='80' r='5' fill='%230891B2'/%3E%3Ccircle cx='25.359' cy='40' r='5' fill='%2310B981'/%3E%3Cpath d='M60 100L60 120M60 20L60 0M25.359 40L8.038 30M94.641 40L111.962 30M94.641 80L111.962 90M25.359 80L8.038 90' stroke='%2310B981' stroke-width='2'/%3E%3C/svg%3E")`,
-              backgroundSize: '160px 160px',
-              backgroundPosition: 'center',
-            }}></div>
-          {/* Radial gradient mask to fade out the SVG towards the edges */}
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,rgba(248,250,252,1)_70%)]"></div>
-          {/* Linear gradient for bottom fade out */}
-          <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-slate-50 to-transparent"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(241,245,249,1)_0%,rgba(248,250,252,1)_100%)]"></div>
         </div>
 
         <div className="max-w-5xl mx-auto text-center relative z-20">

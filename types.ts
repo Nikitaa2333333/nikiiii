@@ -21,3 +21,13 @@ export interface Product {
   images?: string[];
   thumbnail?: string;
 }
+
+export interface Manufacturer {
+  id: string;
+  name: string;
+  logo: string;
+  description?: string;
+  highlights?: string[];
+  subcategories?: string[];
+  brandColor?: string;
+}

@@ -12,10 +12,12 @@ import { ROUTES } from './lib/routes';
 const Home = lazy(() => import('./pages/Home'));
 const CatalogPage = lazy(() => import('./pages/CatalogPage'));
 const ManufacturersPage = lazy(() => import('./pages/ManufacturersPage'));
+const ManufacturerPage = lazy(() => import('./pages/ManufacturerPage'));
 const CategoryPage = lazy(() => import('./pages/CategoryPage'));
 const SubcategoryPage = lazy(() => import('./pages/SubcategoryPage'));
 const ProductPage = lazy(() => import('./pages/ProductPage'));
 const ArticlesPage = lazy(() => import('./pages/ArticlesPage'));
+const ArticleViewPage = lazy(() => import('./pages/ArticleViewPage'));
 import { useModal } from './context/ModalContext';
 
 const ScrollToTop = () => {
@@ -49,10 +51,12 @@ const AppContent: React.FC = () => {
             <Route path={ROUTES.HOME} element={<Home />} />
             <Route path={ROUTES.CATALOG} element={<CatalogPage />} />
             <Route path={ROUTES.MANUFACTURERS} element={<ManufacturersPage />} />
+            <Route path="/manufacturers/:manufacturerId" element={<ManufacturerPage />} />
             <Route path="/catalog/:categoryId" element={<CategoryPage />} />
             <Route path="/catalog/:categoryId/:subcategoryId" element={<SubcategoryPage />} />
             <Route path="/catalog/:categoryId/:subcategoryId/:productId" element={<ProductPage />} />
-            <Route path="/articles" element={<ArticlesPage />} />
+            <Route path={ROUTES.ARTICLES} element={<ArticlesPage />} />
+            <Route path="/articles/:articleId" element={<ArticleViewPage />} />
             <Route path="*" element={<Home />} />
           </Routes>
         </Suspense>

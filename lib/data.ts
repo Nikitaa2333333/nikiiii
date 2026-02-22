@@ -1,4 +1,4 @@
-import { Category, Subcategory } from '../types';
+import { Category, Subcategory, Manufacturer } from '../types';
 
 export const CATEGORIES: Category[] = [
     { id: 'general-lab', name: 'Общелабораторное оборудование', span: '1x1' },
@@ -33,11 +33,31 @@ export const SUBCATEGORIES: Subcategory[] = [
     { id: 'ultracentrifuge', categoryId: 'centrifuge', name: 'Ультрацентрифуги' }
 ];
 
-export const MANUFACTURERS = [
+export const MANUFACTURERS: Manufacturer[] = [
     { id: 'yingtai', name: 'Yingtai Instrument', logo: 'https://cdn.brandfetch.io/yingtai.com/w/400/h/400' },
     { id: 'eppendorf', name: 'Eppendorf', logo: 'https://cdn.brandfetch.io/eppendorf.com/w/400/h/400' },
     { id: 'biobase', name: 'Biobase', logo: 'https://cdn.brandfetch.io/biobase.cc/w/400/h/400' },
     { id: 'thermo-fisher', name: 'Thermo Fisher Scientific', logo: 'https://cdn.brandfetch.io/thermofisher.com/w/400/h/400' },
     { id: 'ika', name: 'IKA', logo: 'https://cdn.brandfetch.io/ika.com/w/400/h/400' },
-    { id: 'memmert', name: 'Memmert', logo: 'https://cdn.brandfetch.io/memmert.com/w/400/h/400' },
+    {
+        id: 'memmert',
+        name: 'Memmert GmbH + Co.KG',
+        logo: 'https://cdn.brandfetch.io/memmert.com/w/400/h/400',
+        brandColor: '#D30F24',
+        description: 'С момента основания в 1933 году Memmert всегда был и остается надежным партнером для своих клиентов, что является одной из основополагающих причин успеха бренда. Сейчас компания Memmert занимет почетное место среди ведущих производителей термостатирующего оборудования для различных применений.',
+        highlights: [
+            'биологические, химические и пищевые исследования',
+            'испытания промышленных материалов и компонентов',
+            'широкий спектр тестов качества в сложных производственных процессах',
+            'медицина и ветеринария'
+        ],
+        subcategories: [
+            'Климатические камеры',
+            'Инкубаторы',
+            'Сушильные шкафы',
+            'Испытательные камеры',
+            'Водяные бани',
+            'СО2-Инкубаторы'
+        ]
+    },
 ];

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { MANUFACTURERS } from '../lib/data';
 import { ROUTES } from '../lib/routes';
 import { CatalogToggle } from '../components/CatalogToggle';
+import { ChevronRight } from 'lucide-react';
 
 const ManufacturersPage: React.FC = () => {
     return (
@@ -14,16 +15,27 @@ const ManufacturersPage: React.FC = () => {
                 <div className="max-w-[1920px] mx-auto">
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                         {MANUFACTURERS.map((brand) => (
-                            <div
+                            <Link
                                 key={brand.id}
-                                className="surface-card group h-32 rounded-[20px] flex items-center justify-center p-8 relative overflow-hidden flex-shrink-0"
+                                to={ROUTES.MANUFACTURER(brand.id)}
+                                className="surface-card group relative rounded-[24px] h-56 flex flex-col items-center justify-end p-4 overflow-hidden border border-gray-100 shadow-[0_2px_10px_rgba(0,0,0,0.02)] hover:border-cyan-300 hover:shadow-[0_10px_40px_rgba(14,165,233,0.1)] transition-all duration-500 bg-white"
                             >
-                                <img
-                                    src={brand.logo}
-                                    alt={brand.name}
-                                    className="max-w-full max-h-full object-contain filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
-                                />
-                            </div>
+                                {/* Огромный логотип во всю плашку */}
+                                <div className="absolute inset-4 sm:inset-6 flex items-center justify-center transition-all duration-500 transform group-hover:scale-[1.15]">
+                                    <img
+                                        src={brand.logo}
+                                        alt={brand.name}
+                                        className="w-full h-full object-contain mix-blend-multiply"
+                                    />
+                                </div>
+
+                                {/* Название поверх логотипа (как "парящая" таблетка) */}
+                                <div className="relative z-10 w-full flex justify-center transform translate-y-8 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out">
+                                    <span className="text-xs sm:text-sm font-extrabold text-gray-900 group-hover:text-cyan-700 transition-colors text-center bg-white/95 backdrop-blur-md px-6 py-2.5 rounded-full shadow-[0_4px_12px_rgba(0,0,0,0.08)] border border-gray-50 max-w-full truncate">
+                                        {brand.name}
+                                    </span>
+                                </div>
+                            </Link>
                         ))}
                     </div>
                 </div>
