@@ -34,15 +34,15 @@ export const SUBCATEGORIES: Subcategory[] = [
 ];
 
 export const MANUFACTURERS: Manufacturer[] = [
-    { id: 'yingtai', name: 'Yingtai Instrument', logo: '/manufacturers/yingtai.png' },
-    { id: 'eppendorf', name: 'Eppendorf', logo: '/manufacturers/eppendorf.png' },
-    { id: 'biobase', name: 'Biobase', logo: '/manufacturers/biobase.png' },
-    { id: 'thermo-fisher', name: 'Thermo Fisher Scientific', logo: '/manufacturers/thermofisher.png' },
-    { id: 'ika', name: 'IKA', logo: '/manufacturers/ika.png' },
+    { id: 'yingtai', name: 'Yingtai Instrument', logo: 'https://cdn.brandfetch.io/yingtai.com/w/400/h/400' },
+    { id: 'eppendorf', name: 'Eppendorf', logo: 'https://cdn.brandfetch.io/eppendorf.com/w/400/h/400' },
+    { id: 'biobase', name: 'Biobase', logo: 'https://cdn.brandfetch.io/biobase.cc/w/400/h/400' },
+    { id: 'thermo-fisher', name: 'Thermo Fisher Scientific', logo: 'https://cdn.brandfetch.io/thermofisher.com/w/400/h/400' },
+    { id: 'ika', name: 'IKA', logo: 'https://cdn.brandfetch.io/ika.com/w/400/h/400' },
     {
         id: 'memmert',
         name: 'Memmert GmbH + Co.KG',
-        logo: '/manufacturers/memmert.png',
+        logo: 'https://cdn.brandfetch.io/memmert.com/w/400/h/400',
         brandColor: '#D30F24',
         description: 'С момента основания в 1933 году Memmert всегда был и остается надежным партнером для своих клиентов, что является одной из основополагающих причин успеха бренда. Сейчас компания Memmert занимет почетное место среди ведущих производителей термостатирующего оборудования для различных применений.',
         highlights: [
