@@ -16,7 +16,7 @@ export const ARTICLES: Article[] = [
         date: '20 Февраля 2026',
         category: 'Центрифугирование',
         readTime: '6 мин',
-        image: 'https://placehold.co/800x400/0ea5e9/ffffff?text=ПРП-Терапия',
+        image: '/articles/prp_centrifuge.png',
         summary: 'Глубокий взгляд на процессы центрифугирования, лежащие в основе современной PRP-терапии. Чем отличается плазмолифтинг от PRP и почему выбор центрифуги — это выбор результата.',
         content: `
 <h2>Регенерация на клеточном уровне</h2>
@@ -45,7 +45,7 @@ export const ARTICLES: Article[] = [
         date: '18 Февраля 2026',
         category: 'Исследования',
         readTime: '8 мин',
-        image: 'https://placehold.co/800x400/0369A1/ffffff?text=Ультрацентрифуги',
+        image: '/articles/ultracentrifuge.png',
         summary: 'Как ультрацентрифуги помогают ученым разделять протеины, изучать вирусы и синтезировать новые вакцины, создавая перегрузки в миллионы G.',
         content: `
 <h2>Путешествие за грань гравитации</h2>
@@ -73,7 +73,7 @@ export const ARTICLES: Article[] = [
         date: '15 Февраля 2026',
         category: 'Термостатика',
         readTime: '7 мин',
-        image: 'https://placehold.co/800x400/0284c7/ffffff?text=CO2+Инкубаторы',
+        image: '/articles/incubator.png',
         summary: 'Температура — не единственный фактор выживания in vitro. Разбираем важность поддержания точного уровня CO2 и влажности для клеточных линий.',
         content: `
 <h2>Капризы живой материи</h2>
@@ -99,7 +99,7 @@ export const ARTICLES: Article[] = [
         date: '10 Февраля 2026',
         category: 'Микроскопия',
         readTime: '5 мин',
-        image: 'https://placehold.co/800x400/075985/ffffff?text=ИИ+в+Микроскопии',
+        image: '/articles/ai_microscope.png',
         summary: 'Автоматическое распознавание раковых клеток, подсчет лейкоцитов в реальном времени и объединение фокусных плоскостей — как софт меняет оптику.',
         content: `
 <h2>Больше, чем просто увеличение</h2>
@@ -131,7 +131,7 @@ export const ARTICLES: Article[] = [
         date: '05 Февраля 2026',
         category: 'Общелабораторное оборудование',
         readTime: '6 мин',
-        image: 'https://placehold.co/800x400/0ea5e9/ffffff?text=Ламинарные+Шкафы',
+        image: '/articles/biosafety_cabinet.png',
         summary: 'Разбираемся в классах биологической безопасности (Biosafety Cabinets). Как движение воздуха защищает оператора и стерильные образцы от загрязнения.',
         content: `
 <h2>Что скрывается за стеклом?</h2>
