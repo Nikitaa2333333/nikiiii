@@ -25,7 +25,7 @@ const ManufacturersPage: React.FC = () => {
                                     <img
                                         src={brand.logo}
                                         alt={brand.name}
-                                        className="w-full h-full object-contain mix-blend-multiply"
+                                        className="w-full h-full object-contain mix-blend-multiply transform-gpu"
                                     />
                                 </div>
 

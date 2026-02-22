@@ -47,7 +47,7 @@ const ManufacturerPage: React.FC = () => {
                         <img
                             src={manufacturer.logo}
                             alt={`Логотип ${manufacturer.name}`}
-                            className="h-16 md:h-20 w-auto object-contain mix-blend-multiply filter grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
+                            className="h-16 md:h-20 w-auto object-contain mix-blend-multiply filter grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-500 transform-gpu"
                         />
                     </div>
 
