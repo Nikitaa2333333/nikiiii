@@ -8,5 +8,5 @@ export const ROUTES = {
     PRODUCT: (categoryId: string, subcategoryId: string, productId: string) => `/catalog/${categoryId}/${subcategoryId}/${productId}`,
     ARTICLES: '/articles',
     ARTICLE: (id: string) => `/articles/${id}`,
-    METHODS: '/methods',
+    MANUALS: '/manuals',
 };
