@@ -9,4 +9,5 @@ export const ROUTES = {
     ARTICLES: '/articles',
     ARTICLE: (id: string) => `/articles/${id}`,
     MANUALS: '/manuals',
+    METHODS: '/methods',
 };
