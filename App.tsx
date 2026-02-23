@@ -36,12 +36,12 @@ const AppContent: React.FC = () => {
   const { openModal, isOpen } = useModal();
 
   return (
-    <div className="relative min-h-screen font-sans text-gray-900">
+    <div className="relative min-h-screen font-sans text-gray-900 w-full overflow-x-hidden">
       <ScrollToTop />
 
       <Header />
 
-      <main className="relative z-10">
+      <main className="relative z-10 w-full pb-28 md:pb-24">
         <Suspense fallback={
           <div className="flex items-center justify-center min-h-[60vh]">
             <div className="text-gray-400 font-medium animate-pulse">Загрузка...</div>

@@ -8,7 +8,7 @@ export const CatalogToggle: React.FC = () => {
     const isManufacturers = location.pathname === ROUTES.MANUFACTURERS;
 
     return (
-        <div className="flex justify-center w-full pt-2 pb-6">
+        <div className="flex justify-center w-full mt-6 pt-2 pb-8">
             <div className="inline-flex items-center bg-white border border-slate-200/60 p-1.5 rounded-full shadow-soft-sm">
                 <Link
                     to={ROUTES.CATALOG}

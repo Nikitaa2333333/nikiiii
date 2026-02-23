@@ -23,21 +23,23 @@ const Home: React.FC = () => {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="relative pt-24 pb-20 md:pt-40 md:pb-32 px-4 z-40 overflow-hidden">
+      <section className="relative pt-24 pb-20 md:pt-40 md:pb-32 px-4 md:px-8 lg:px-12 z-40 overflow-hidden w-full">
         {/* Simple gradient background */}
         <div className="absolute inset-0 overflow-hidden -z-10 bg-slate-50 flex items-center justify-center">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(241,245,249,1)_0%,rgba(248,250,252,1)_100%)]"></div>
         </div>
 
-        <div className="max-w-5xl mx-auto text-center relative z-20">
-          <h1 className="text-4xl sm:text-6xl md:text-8xl font-black text-gray-900 leading-[1.1] mb-8 tracking-tighter">
-            Современное <br className="hidden sm:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-cyan-500">
-              лабораторное
-            </span>
-            <br className="hidden sm:block" /> оборудование
-          </h1>
-          <p className="max-w-2xl mx-auto text-lg md:text-2xl text-gray-500 font-medium leading-relaxed mb-12 opacity-80">
+        <div className="max-w-[1920px] mx-auto text-center relative z-20">
+          <div className="-mx-4 sm:mx-0">
+            <h1 className="text-[12.5vw] sm:text-6xl md:text-8xl font-black text-gray-900 leading-[0.9] mb-10 tracking-tighter w-full px-1">
+              Современное <br className="sm:hidden" />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-cyan-500">
+                лабораторное
+              </span>
+              <br className="sm:hidden" /> оборудование
+            </h1>
+          </div>
+          <p className="max-w-xl mx-auto px-4 text-lg md:text-2xl text-gray-500 font-medium leading-relaxed mb-12 opacity-80">
             Профессиональные решения для лабораторий. Точность, надежность и передовые технологии.
           </p>
 
@@ -54,8 +56,8 @@ const Home: React.FC = () => {
       </section>
 
       {/* Trust Badges */}
-      <section className="px-4 pb-24 relative z-10">
-        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+      <section className="px-4 md:px-8 lg:px-12 pb-24 relative z-10">
+        <div className="max-w-[1920px] mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
           {[
             { icon: <Zap className="w-6 h-6" />, label: "Быстрая доставка", sub: "По всей России" },
             { icon: <ShieldCheck className="w-6 h-6" />, label: "Контроль качества", sub: "Сертификаты ISO" },
@@ -77,10 +79,10 @@ const Home: React.FC = () => {
       </section>
 
       {/* Information Sections Grid */}
-      <section className="px-4 pb-24 relative z-10">
-        <div className="max-w-7xl mx-auto">
+      <section className="px-4 md:px-8 lg:px-12 pb-40 relative z-10">
+        <div className="max-w-[1920px] mx-auto">
           <h2 className="text-3xl font-extrabold text-gray-900 mb-10 text-center">Полезная информация</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {[
               { id: 'team', name: 'Наша команда', icon: <Users className="w-6 h-6" /> },
               { id: 'policy', name: 'Политика компании', icon: <FileText className="w-6 h-6" /> },
