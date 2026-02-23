@@ -30,14 +30,14 @@ const Home: React.FC = () => {
         </div>
 
         <div className="max-w-[1920px] mx-auto text-center relative z-20">
-          <h1 className="text-[12.5vw] sm:text-6xl md:text-7xl lg:text-8xl font-black text-gray-900 leading-[0.95] sm:leading-[1.1] mb-10 tracking-tighter w-full -mx-4 px-2 sm:mx-auto sm:max-w-5xl sm:px-0">
-            Современное <br className="sm:hidden" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-cyan-500">
+          <h1 className="text-[11vw] sm:text-6xl md:text-7xl lg:text-8xl font-black text-gray-900 leading-[1.05] sm:leading-[1.1] mb-8 tracking-tighter mx-auto max-w-full sm:max-w-5xl break-words">
+            Современное<br className="sm:hidden" />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-cyan-500 mx-1">
               лабораторное
-            </span>
-            <br className="sm:hidden" /> оборудование
+            </span><br className="sm:hidden" />
+            оборудование
           </h1>
-          <p className="max-w-xl mx-auto px-4 text-lg md:text-2xl text-gray-500 font-medium leading-relaxed mb-12 opacity-80">
+          <p className="max-w-xl mx-auto text-lg md:text-2xl text-gray-500 font-medium leading-relaxed mb-12 opacity-80">
             Профессиональные решения для лабораторий. Точность, надежность и передовые технологии.
           </p>
 

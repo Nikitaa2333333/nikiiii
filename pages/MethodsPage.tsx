@@ -1,32 +1,32 @@
 import React from 'react';
 import Breadcrumbs from '../components/Breadcrumbs';
-import { 
-  Book, AlertOctagon, Clock, Thermometer, Droplet, Activity, 
-  Microscope, BarChart3, ShieldCheck, Beaker, Zap, Info, ArrowDownRight, Check
+import {
+    Book, AlertOctagon, Clock, Thermometer, Droplet, Activity,
+    Microscope, BarChart3, ShieldCheck, Beaker, Zap, Info, ArrowDownRight, Check
 } from 'lucide-react';
 
 const MethodsPage: React.FC = () => {
     const breadcrumbItems = [{ label: 'Методики' }];
-    
+
     return (
         <div className="flex flex-col min-h-screen bg-[#FDFEFF] pb-24 font-sans">
             {/* Header / Hero Section */}
             <div className="relative pt-12 pb-20 overflow-hidden">
                 <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-cyan-100/50 rounded-full blur-3xl"></div>
                 <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-blue-100/40 rounded-full blur-3xl"></div>
-                
+
                 <div className="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
                     <Breadcrumbs items={breadcrumbItems} />
-                    
+
                     <div className="mt-12 max-w-3xl">
                         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white shadow-sm border border-cyan-100 text-cyan-600 text-xs font-black uppercase tracking-widest mb-8">
-                           <Activity className="w-4 h-4 animate-pulse" /> Scientific Protocol
+                            <Activity className="w-4 h-4 animate-pulse" /> Scientific Protocol
                         </div>
-                        <h1 className="text-5xl md:text-7xl font-black text-slate-900 leading-[1.05] tracking-tight mb-8">
-                            Тайная жизнь <br/> 
+                        <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-slate-900 leading-[1.1] tracking-tight mb-6 break-words">
+                            Тайная жизнь <br className="hidden sm:block" />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-600 italic">вашей пробирки</span>
                         </h1>
-                        <p className="text-xl text-slate-500 font-medium leading-relaxed">
+                        <p className="text-lg md:text-xl text-slate-500 font-medium leading-relaxed">
                             Почему 75% точности диагноза зависит не от врача, а от 15 минут вращения в роторе? Разбираем физику и биологию преаналитики.
                         </p>
                     </div>
@@ -34,7 +34,7 @@ const MethodsPage: React.FC = () => {
             </div>
 
             <main className="max-w-7xl mx-auto px-4 md:px-8">
-                
+
                 {/* Statistics Section */}
                 <section className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
                     <div className="bg-slate-900 rounded-[32px] p-8 text-white relative overflow-hidden group">
@@ -45,7 +45,7 @@ const MethodsPage: React.FC = () => {
                         <div className="text-slate-400 text-sm font-bold uppercase tracking-widest mb-4">Laboratory Risk</div>
                         <p className="text-slate-300">Ошибок происходит именно на этапе подготовки пробы (Preanalytical phase).</p>
                     </div>
-                    
+
                     <div className="bg-cyan-600 rounded-[32px] p-8 text-white relative overflow-hidden group">
                         <div className="text-5xl font-black mb-4">3.3%</div>
                         <div className="text-cyan-100 text-sm font-bold uppercase tracking-widest mb-4">Hemolysis Rate</div>
@@ -63,8 +63,8 @@ const MethodsPage: React.FC = () => {
                 <section className="mb-24">
                     <div className="flex flex-col lg:flex-row gap-16 items-center">
                         <div className="w-full lg:w-1/2">
-                            <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-8 leading-tight">
-                                Архитектура <br/>разделения фракций
+                            <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-8 leading-tight break-words">
+                                Архитектура <br className="hidden sm:block" />разделения фракций
                             </h2>
                             <div className="space-y-4">
                                 <div className="flex gap-6 p-6 bg-white rounded-2xl border border-slate-100 hover:border-cyan-200 transition-all cursor-default group">
@@ -104,10 +104,10 @@ const MethodsPage: React.FC = () => {
                 {/* Scientific Deep Dive */}
                 <section className="mb-24 bg-blue-50/50 rounded-[48px] p-8 md:p-16 border border-blue-100">
                     <div className="flex items-center gap-4 mb-12">
-                       <Beaker className="w-10 h-10 text-cyan-600" />
-                       <h2 className="text-3xl font-black text-slate-900">Научное подтверждение</h2>
+                        <Beaker className="w-10 h-10 text-cyan-600" />
+                        <h2 className="text-3xl font-black text-slate-900">Научное подтверждение</h2>
                     </div>
-                    
+
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                         <div className="space-y-8">
                             <div className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
@@ -127,7 +127,7 @@ const MethodsPage: React.FC = () => {
                                 </p>
                             </div>
                         </div>
-                        
+
                         <div className="flex flex-col justify-center">
                             <div className="space-y-2">
                                 <h4 className="text-sm font-black text-cyan-700 uppercase tracking-widest mb-6">Comparative Matrix</h4>
@@ -136,11 +136,11 @@ const MethodsPage: React.FC = () => {
                                     { label: "Выход тромбоцитов", correct: "До 98%", bad: "Потеря до 35%" },
                                     { label: "Температурная стабильность", correct: "20-22°C", bad: "Нагрев до 45°C" },
                                 ].map((row, i) => (
-                                    <div key={i} className="flex items-center justify-between py-5 border-b border-slate-200 group">
+                                    <div key={i} className="flex flex-col sm:flex-row items-start sm:items-center justify-between py-5 border-b border-slate-200 group gap-4 sm:gap-0">
                                         <span className="text-slate-600 font-bold group-hover:text-slate-900 transition-colors">{row.label}</span>
-                                        <div className="flex gap-3">
-                                            <span className="px-4 py-1.5 bg-emerald-100 text-emerald-700 text-xs font-black rounded-full uppercase tracking-tighter">{row.correct}</span>
-                                            <span className="px-4 py-1.5 bg-rose-100 text-rose-700 text-xs font-black rounded-full uppercase tracking-tighter">{row.bad}</span>
+                                        <div className="flex flex-wrap gap-2 sm:gap-3 w-full sm:w-auto">
+                                            <span className="px-3 md:px-4 py-1.5 bg-emerald-100 text-emerald-700 text-[10px] md:text-xs font-black rounded-full uppercase tracking-tighter whitespace-nowrap">{row.correct}</span>
+                                            <span className="px-3 md:px-4 py-1.5 bg-rose-100 text-rose-700 text-[10px] md:text-xs font-black rounded-full uppercase tracking-tighter whitespace-nowrap">{row.bad}</span>
                                         </div>
                                     </div>
                                 ))}
@@ -153,15 +153,15 @@ const MethodsPage: React.FC = () => {
                 <section className="bg-slate-900 rounded-[64px] p-12 md:p-24 text-center relative overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/40 via-blue-900/20 to-transparent"></div>
                     <div className="relative z-10 w-full">
-                       <h2 className="text-4xl md:text-6xl font-black text-white mb-8 tracking-tighter leading-tight">
-                        Доверьте точность <br/> профессионалам
-                       </h2>
-                       <p className="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto mb-12 font-medium">
-                           Мы подберем центрифугу, которая сделает вашу преаналитику безупречной. Соответствие стандартам CLSI гарантировано.
-                       </p>
-                       <button className="bg-white text-slate-900 px-12 py-6 rounded-full text-xl font-black hover:bg-cyan-400 hover:text-white transition-all shadow-2xl active:scale-95">
-                           Получить консультацию
-                       </button>
+                        <h2 className="text-3xl sm:text-4xl md:text-6xl font-black text-white mb-6 md:mb-8 tracking-tighter leading-tight break-words">
+                            Доверьте точность <br className="hidden sm:block" /> профессионалам
+                        </h2>
+                        <p className="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto mb-12 font-medium">
+                            Мы подберем центрифугу, которая сделает вашу преаналитику безупречной. Соответствие стандартам CLSI гарантировано.
+                        </p>
+                        <button className="bg-white text-slate-900 px-12 py-6 rounded-full text-xl font-black hover:bg-cyan-400 hover:text-white transition-all shadow-2xl active:scale-95">
+                            Получить консультацию
+                        </button>
                     </div>
                 </section>
 
