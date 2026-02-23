@@ -18,6 +18,7 @@ const SubcategoryPage = lazy(() => import('./pages/SubcategoryPage'));
 const ProductPage = lazy(() => import('./pages/ProductPage'));
 const ArticlesPage = lazy(() => import('./pages/ArticlesPage'));
 const ArticleViewPage = lazy(() => import('./pages/ArticleViewPage'));
+const MethodsPage = lazy(() => import('./pages/MethodsPage'));
 import { useModal } from './context/ModalContext';
 
 const ScrollToTop = () => {
@@ -57,6 +58,7 @@ const AppContent: React.FC = () => {
             <Route path="/catalog/:categoryId/:subcategoryId/:productId" element={<ProductPage />} />
             <Route path={ROUTES.ARTICLES} element={<ArticlesPage />} />
             <Route path="/articles/:articleId" element={<ArticleViewPage />} />
+            <Route path={ROUTES.METHODS} element={<MethodsPage />} />
             <Route path="*" element={<Home />} />
           </Routes>
         </Suspense>
