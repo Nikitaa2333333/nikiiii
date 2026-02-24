@@ -92,13 +92,13 @@ const ProductPage: React.FC = () => {
               onClick={() => openModal(product.name)}
               className="flex-[2] bg-gray-900 text-white font-bold text-lg py-4 px-8 rounded-xl hover:bg-gray-800 transition-colors shadow-sm"
             >
-              Запросить предложение
+              Запросить КП
             </button>
             <button
-              onClick={() => openPDFModal('/brochure.pdf')}
+              onClick={() => openPDFModal(product.pdfUrl || '/brochure.pdf')}
               className="flex-1 border border-gray-300 text-gray-900 font-bold text-lg py-4 px-8 rounded-xl hover:bg-gray-50 transition-colors flex items-center justify-center gap-2"
             >
-              Скачать PDF
+              Открыть PDF
             </button>
           </div>
         </div>

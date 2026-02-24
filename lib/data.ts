@@ -30,7 +30,8 @@ export const SUBCATEGORIES: Subcategory[] = [
     { id: 'cosmetology-prp', categoryId: 'centrifuge', name: 'Центрифуги для косметологии (PRP -плазмалифтинг)' },
     { id: 'hematocrit', categoryId: 'centrifuge', name: 'Гематокритные центрифуги' },
     { id: 'cell-washing', categoryId: 'centrifuge', name: 'Центрифуги для промывки клеток' },
-    { id: 'ultracentrifuge', categoryId: 'centrifuge', name: 'Ультрацентрифуги' }
+    { id: 'ultracentrifuge', categoryId: 'centrifuge', name: 'Ультрацентрифуги' },
+    { id: 'climate-chambers-memmert', categoryId: 'thermo', name: 'Климатические камеры Memmert' },
 ];
 
 export const MANUFACTURERS: Manufacturer[] = [

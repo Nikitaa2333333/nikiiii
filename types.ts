@@ -20,6 +20,7 @@ export interface Product {
   price?: string;
   images?: string[];
   thumbnail?: string;
+  pdfUrl?: string;
 }
 
 export interface Manufacturer {

@@ -32,5 +32,62 @@
             "https://images.unsplash.com/photo-1579154236113-de92667d4fc6?auto=format&fit=crop&q=80&w=800"
         ],
         "inStock": true
+    },
+    {
+        "id": "memmert-hcp-108",
+        "subcategoryId": "climate-chambers-memmert",
+        "name": "Климатическая камера Memmert HCP 108",
+        "specs": [
+            "Объём: 108 л",
+            "Диапазон температур: +10°C ... +60°C",
+            "Диапазон влажности: 10% ... 98% RH",
+            "Точность температуры: ±0.1 K",
+            "Точность влажности: ±1% RH",
+            "Управление: AtmoCONTROL"
+        ],
+        "description": "Точный контроль климата, высокая надёжность, простое управление",
+        "images": [
+            "/images/memmert_brochure.png"
+        ],
+        "inStock": true,
+        "pdfUrl": "/memmert_climate_chambers.pdf"
+    },
+    {
+        "id": "memmert-hcp-256",
+        "subcategoryId": "climate-chambers-memmert",
+        "name": "Климатическая камера Memmert HCP 256",
+        "specs": [
+            "Объём: 256 л",
+            "Диапазон температур: +10°C ... +60°C",
+            "Диапазон влажности: 10% ... 98% RH",
+            "Точность температуры: ±0.1 K",
+            "Точность влажности: ±1% RH",
+            "Управление: AtmoCONTROL"
+        ],
+        "description": "Увеличенный объем, идеально для долгосрочных испытаний и хранения образцов",
+        "images": [
+            "/images/memmert_brochure.png"
+        ],
+        "inStock": true,
+        "pdfUrl": "/memmert_climate_chambers.pdf"
+    },
+    {
+        "id": "memmert-hcp-749",
+        "subcategoryId": "climate-chambers-memmert",
+        "name": "Климатическая камера Memmert HCP 749",
+        "specs": [
+            "Объём: 749 л",
+            "Диапазон температур: +10°C ... +60°C",
+            "Диапазон влажности: 10% ... 98% RH",
+            "Точность температуры: ±0.1 K",
+            "Точность влажности: ±1% RH",
+            "Управление: AtmoCONTROL"
+        ],
+        "description": "Большой объём для масштабных испытаний материалов и стабильности",
+        "images": [
+            "/images/memmert_brochure.png"
+        ],
+        "inStock": false,
+        "pdfUrl": "/memmert_climate_chambers.pdf"
     }
 ]

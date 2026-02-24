@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { MANUFACTURERS } from '../lib/data';
+import { MANUFACTURERS, SUBCATEGORIES } from '../lib/data';
 import { ROUTES } from '../lib/routes';
 import { useModal } from '../context/ModalContext';
 import Breadcrumbs from '../components/Breadcrumbs';
@@ -77,19 +77,41 @@ const ManufacturerPage: React.FC = () => {
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-                            {manufacturer.subcategories.map((sub, idx) => (
-                                <div
-                                    key={idx}
-                                    className="surface-card group relative rounded-[20px] p-6 h-32 flex flex-col justify-start overflow-hidden hover:border-cyan-500/50 cursor-pointer"
-                                >
-                                    <span className="text-base font-bold text-gray-900 leading-tight group-hover:text-cyan-600 transition-colors pr-8 z-10">
-                                        {sub}
-                                    </span>
-                                    <div className="absolute right-4 bottom-4 opacity-0 group-hover:opacity-100 transition-all transform translate-y-2 group-hover:translate-y-0 text-cyan-600">
-                                        <ChevronRight className="w-5 h-5" />
+                            {manufacturer.subcategories.map((sub, idx) => {
+                                // Ищем реальную подкатегорию по имени, чтобы получить её ID
+                                const matchedSub = SUBCATEGORIES.find(s =>
+                                    s.name.toLowerCase().includes(sub.toLowerCase()) ||
+                                    sub.toLowerCase().includes(s.name.toLowerCase())
+                                );
+
+                                if (matchedSub) {
+                                    return (
+                                        <Link
+                                            key={idx}
+                                            to={ROUTES.SUBCATEGORY(matchedSub.categoryId, matchedSub.id)}
+                                            className="surface-card group relative rounded-[20px] p-6 h-32 flex flex-col justify-start overflow-hidden hover:border-cyan-500/50 cursor-pointer"
+                                        >
+                                            <span className="text-base font-bold text-gray-900 leading-tight group-hover:text-cyan-600 transition-colors pr-8 z-10">
+                                                {sub}
+                                            </span>
+                                            <div className="absolute right-4 bottom-4 opacity-0 group-hover:opacity-100 transition-all transform translate-y-2 group-hover:translate-y-0 text-cyan-600">
+                                                <ChevronRight className="w-5 h-5" />
+                                            </div>
+                                        </Link>
+                                    );
+                                }
+
+                                return (
+                                    <div
+                                        key={idx}
+                                        className="surface-card group relative rounded-[20px] p-6 h-32 flex flex-col justify-start overflow-hidden opacity-50 cursor-not-allowed"
+                                    >
+                                        <span className="text-base font-bold text-gray-900 leading-tight pr-8 z-10">
+                                            {sub}
+                                        </span>
                                     </div>
-                                </div>
-                            ))}
+                                );
+                            })}
                         </div>
                     </div>
                 )}

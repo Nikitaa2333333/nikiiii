@@ -77,26 +77,21 @@ const SubcategoryPage: React.FC = () => {
                       {product.name}
                     </h3>
 
-                    <div className="flex flex-col gap-2 mb-6">
-                      {product.description.split(',').map((part, idx) => (
-                        <div key={idx} className="flex items-start gap-2 text-xs text-gray-700 leading-tight">
-                          <span className="w-1.5 h-1.5 bg-blue-500 rounded-full flex-shrink-0 mt-1.5" />
-                          <span>{part.trim()}</span>
-                        </div>
-                      ))}
-                    </div>
+                    {/* Характеристики убраны по запросу для более чистого вида */}
 
                     <div className="mt-auto pt-3 flex flex-col gap-2">
-                      <button
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          openPDFModal('/brochure.pdf');
-                        }}
-                        className="w-full bg-gray-900 text-white px-4 py-2.5 rounded-xl text-xs font-semibold hover:bg-black transition-all duration-200 flex items-center justify-center gap-2 shadow-sm hover:shadow-md active:scale-95"
-                      >
-                        <FileText className="w-4 h-4" />
-                        <span>Открыть PDF</span>
-                      </button>
+                      {product.pdfUrl && (
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            openPDFModal(product.pdfUrl!);
+                          }}
+                          className="w-full bg-gray-900 text-white px-4 py-2.5 rounded-xl text-xs font-semibold hover:bg-black transition-all duration-200 flex items-center justify-center gap-2 shadow-sm hover:shadow-md active:scale-95"
+                        >
+                          <FileText className="w-4 h-4" />
+                          <span>Открыть PDF</span>
+                        </button>
+                      )}
 
                       <button
                         onClick={(e) => {
@@ -107,7 +102,7 @@ const SubcategoryPage: React.FC = () => {
                         className="w-full bg-white text-gray-700 border border-gray-200 px-4 py-2.5 rounded-xl text-xs font-semibold hover:bg-gray-50 hover:border-gray-300 transition-all duration-200 flex items-center justify-center gap-2 shadow-sm active:scale-95"
                       >
                         <MessageSquare className="w-4 h-4 text-cyan-500" />
-                        <span>Запросить предложение</span>
+                        <span>Запросить КП</span>
                       </button>
                     </div>
                   </div>
