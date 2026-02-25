@@ -34,60 +34,20 @@
         "inStock": true
     },
     {
-        "id": "memmert-hcp-108",
+        "id": "memmert-climate-chambers-combined",
         "subcategoryId": "climate-chambers-memmert",
-        "name": "Климатическая камера Memmert HCP 108",
+        "name": "Климатические испытательные камеры Memmert",
         "specs": [
-            "Объём: 108 л",
-            "Диапазон температур: +10°C ... +60°C",
-            "Диапазон влажности: 10% ... 98% RH",
-            "Точность температуры: ±0.1 K",
-            "Точность влажности: ±1% RH",
-            "Управление: AtmoCONTROL"
+            "Серии: HPPeco, HCP, ICHeco, CTC/TTC",
+            "Производство: Германия",
+            "Стандарт: DIN 12880:2007-05",
+            "Формат: Каталог продукции (PDF)"
         ],
-        "description": "Точный контроль климата, высокая надёжность, простое управление",
+        "description": "Полный обзор решений Memmert для температурных и климатических испытаний. Включает технические характеристики всех моделей камер постоянных условий, влажности и испытаний на стабильность.",
         "images": [
             "/images/memmert_brochure.png"
         ],
         "inStock": true,
-        "pdfUrl": "/memmert_climate_chambers.pdf"
-    },
-    {
-        "id": "memmert-hcp-256",
-        "subcategoryId": "climate-chambers-memmert",
-        "name": "Климатическая камера Memmert HCP 256",
-        "specs": [
-            "Объём: 256 л",
-            "Диапазон температур: +10°C ... +60°C",
-            "Диапазон влажности: 10% ... 98% RH",
-            "Точность температуры: ±0.1 K",
-            "Точность влажности: ±1% RH",
-            "Управление: AtmoCONTROL"
-        ],
-        "description": "Увеличенный объем, идеально для долгосрочных испытаний и хранения образцов",
-        "images": [
-            "/images/memmert_brochure.png"
-        ],
-        "inStock": true,
-        "pdfUrl": "/memmert_climate_chambers.pdf"
-    },
-    {
-        "id": "memmert-hcp-749",
-        "subcategoryId": "climate-chambers-memmert",
-        "name": "Климатическая камера Memmert HCP 749",
-        "specs": [
-            "Объём: 749 л",
-            "Диапазон температур: +10°C ... +60°C",
-            "Диапазон влажности: 10% ... 98% RH",
-            "Точность температуры: ±0.1 K",
-            "Точность влажности: ±1% RH",
-            "Управление: AtmoCONTROL"
-        ],
-        "description": "Большой объём для масштабных испытаний материалов и стабильности",
-        "images": [
-            "/images/memmert_brochure.png"
-        ],
-        "inStock": false,
         "pdfUrl": "/memmert_climate_chambers.pdf"
     }
 ]
