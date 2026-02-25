@@ -60,16 +60,15 @@ const SubcategoryPage: React.FC = () => {
               displayedProducts.map((product) => (
                 <div
                   key={product.id}
-                  className="bg-white rounded-2xl border border-gray-100 overflow-hidden hover:border-blue-400 transition-colors duration-200 flex flex-col h-full group"
+                  className="bg-white rounded-2xl border border-gray-100 overflow-hidden hover:border-blue-400 hover:shadow-xl transition-all duration-300 flex flex-col h-full group max-w-sm"
                 >
-                  <div className="aspect-[1.1] bg-white relative p-6 flex items-center justify-center border-b border-gray-50">
+                  <div className="aspect-square bg-white relative p-4 flex items-center justify-center border-b border-gray-50 overflow-hidden">
                     <img
                       src={(product.images && product.images.length > 0 ? product.images[0] : `https://placehold.co/600x600/f1f5f9/94a3b8?text=${encodeURIComponent(product.name)}`)}
                       alt={product.name}
-                      className="max-width-full max-height-full object-contain mix-blend-multiply"
+                      className="w-full h-full object-contain mix-blend-multiply transition-transform duration-500 group-hover:scale-105"
                       loading="lazy"
                     />
-
                   </div>
 
                   <div className="p-5 flex flex-col flex-grow">
