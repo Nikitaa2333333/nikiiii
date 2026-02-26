@@ -31,6 +31,7 @@ export const SUBCATEGORIES: Subcategory[] = [
     { id: 'hematocrit', categoryId: 'centrifuge', name: 'Гематокритные центрифуги' },
     { id: 'cell-washing', categoryId: 'centrifuge', name: 'Центрифуги для промывки клеток' },
     { id: 'ultracentrifuge', categoryId: 'centrifuge', name: 'Ультрацентрифуги' },
+    { id: 'floor-high-performance', categoryId: 'centrifuge', name: 'Напольные центрифуги высокой производительности' },
     { id: 'climate-chambers-memmert', categoryId: 'thermo', name: 'Климатические камеры Memmert' },
 ];
 
@@ -59,6 +60,25 @@ export const MANUFACTURERS: Manufacturer[] = [
             'Испытательные камеры',
             'Водяные бани',
             'СО2-Инкубаторы'
+        ]
+    },
+    {
+        id: 'hettich',
+        name: 'Andreas Hettich GmbH',
+        logo: '/manufacturers/hettich.png',
+        brandColor: '#B61C23',
+        description: 'Andreas Hettich GmbH — один из мировых лидеров в производстве центрифуг и лабораторного оборудования. Продукция компании славится своей точностью, надежностью и инновационными системами безопасности.',
+        highlights: [
+            'Медицинская диагностика',
+            'Научные исследования',
+            'Промышленные применения',
+            'Высочайшие стандарты безопасности'
+        ],
+        subcategories: [
+            'Микроцентрифуги',
+            'Настольные центрифуги',
+            'Напольные центрифуги',
+            'Рефрижераторные центрифуги'
         ]
     },
 ];
