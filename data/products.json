@@ -32,5 +32,39 @@
             "https://images.unsplash.com/photo-1579154236113-de92667d4fc6?auto=format&fit=crop&q=80&w=800"
         ],
         "inStock": true
+    },
+    {
+        "id": "memmert-climate-chambers-combined",
+        "subcategoryId": "climate-chambers-memmert",
+        "name": "Климатические испытательные камеры Memmert",
+        "specs": [
+            "Серии: HPPeco, HCP, ICHeco, CTC/TTC",
+            "Производство: Германия",
+            "Стандарт: DIN 12880:2007-05",
+            "Формат: Каталог продукции (PDF)"
+        ],
+        "description": "Полный обзор решений Memmert для температурных и климатических испытаний. Включает технические характеристики всех моделей камер постоянных условий, влажности и испытаний на стабильность.",
+        "images": [
+            "/images/memmert_brochure.png"
+        ],
+        "inStock": true,
+        "pdfUrl": "/memmert_climate_chambers.pdf"
+    },
+    {
+        "id": "hettich-rotanta-460-rf",
+        "subcategoryId": "floor-high-performance",
+        "name": "Напольная центрифуга ROTANTA 460 RF",
+        "specs": [
+            "Производитель: Hettich",
+            "Модель: ROTANTA 460 RF",
+            "Тип: Напольная рефрижераторная",
+            "Формат: Техническая брошюра (PDF)"
+        ],
+        "description": "Техническая брошюра для напольной центрифуги ROTANTA 460 RF. Универсальное решение высокой производительности для крупных лабораторий и банков крови.",
+        "images": [
+            "/manufacturers/hettich.png"
+        ],
+        "inStock": true,
+        "pdfUrl": "/pdf/hettich_rotanta_460_rf.pdf"
     }
 ]
