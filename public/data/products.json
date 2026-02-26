@@ -55,7 +55,7 @@
         "subcategoryId": "floor-high-performance",
         "name": "Напольная центрифуга ROTANTA 460 RF",
         "specs": [
-            "Производитель: Andreas Hettich GmbH",
+            "Производитель: Hettich",
             "Модель: ROTANTA 460 RF",
             "Тип: Напольная рефрижераторная",
             "Формат: Техническая брошюра (PDF)"
@@ -66,21 +66,5 @@
         ],
         "inStock": true,
         "pdfUrl": "/pdf/hettich_rotanta_460_rf.pdf"
-    },
-    {
-        "id": "hettich-general-catalog",
-        "subcategoryId": "floor-high-performance",
-        "name": "Общий каталог Andreas Hettich GmbH",
-        "specs": [
-            "Производитель: Andreas Hettich GmbH",
-            "Язык: Английский",
-            "Формат: Общий каталог продукции (PDF)"
-        ],
-        "description": "Полный каталог лабораторного оборудования и центрифуг от Andreas Hettich GmbH. Включает полный спектр моделей от микроцентрифуг до мощных напольных систем.",
-        "images": [
-            "/manufacturers/hettich.png"
-        ],
-        "inStock": true,
-        "pdfUrl": "/pdf/hettich_general_catalog.pdf"
     }
 ]

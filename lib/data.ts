@@ -64,10 +64,10 @@ export const MANUFACTURERS: Manufacturer[] = [
     },
     {
         id: 'hettich',
-        name: 'Andreas Hettich GmbH',
+        name: 'Hettich',
         logo: '/manufacturers/hettich.png',
-        brandColor: '#B61C23',
-        description: 'Andreas Hettich GmbH — один из мировых лидеров в производстве центрифуг и лабораторного оборудования. Продукция компании славится своей точностью, надежностью и инновационными системами безопасности.',
+        brandColor: '#000000',
+        description: 'Hettich — один из мировых лидеров в производстве центрифуг и лабораторного оборудования. Продукция компании славится своей точностью, надежностью и инновационными системами безопасности.',
         highlights: [
             'Медицинская диагностика',
             'Научные исследования',
@@ -79,6 +79,9 @@ export const MANUFACTURERS: Manufacturer[] = [
             'Настольные центрифуги',
             'Напольные центрифуги',
             'Рефрижераторные центрифуги'
+        ],
+        catalogs: [
+            { name: 'Общий каталог Hettich', url: '/pdf/hettich_general_catalog.pdf' }
         ]
     },
 ];

@@ -31,4 +31,5 @@ export interface Manufacturer {
   highlights?: string[];
   subcategories?: string[];
   brandColor?: string;
+  catalogs?: { name: string; url: string }[];
 }
